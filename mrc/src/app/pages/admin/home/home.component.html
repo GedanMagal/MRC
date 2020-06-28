@@ -1,0 +1,40 @@
+<section class="container-fluid">
+    <app-title-page title="Catalogo"></app-title-page>
+    <br>
+
+    <div class="row">
+        <div class="accordion col" id="accordionExample" *ngIf="filmes.length > 0">
+            <div class="card" *ngFor="let filme of filmes; let i = index">
+                <div class="card-header" (click)="openAccordion(i)" id="heading{{i}}">
+                    <h2 class="mb-0">
+                        <button class="btn btn-block " type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">{{filme.titulo}}
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse{{i}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body ">
+                        <p><strong>Sinopse: </strong>{{filme.sinopse}}</p>
+                        <p><strong>Imdb: </strong>{{filme.imdbLink}}</p>
+                        <p><strong>genero: </strong>{{filme.genero}}</p>
+                        <p><strong>dtLancamento: </strong>{{filme?.dtLancamento | date: 'dd/MM/yy'}}</p>
+                        <p><strong>idioma: </strong>{{filme.idioma}}</p>
+                        <p><strong>legendado: </strong>{{filme.legendado}}</p>
+                        <p><strong>diretor: </strong>{{filme.diretor}}</p>
+                        <p><strong>avaliacao: </strong>{{filme.avaliacao}}</p>
+                        <div class="actions">
+                            <button class="btn"><i class="fa fa-pencil-square txt-warning" aria-hidden="true"></i>Editar</button>
+                            <button class="btn" (click)="removeFilme(filme)"><i class="fa fa-minus-circle txt-danger" aria-hidden="true" ></i>Excluir</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col" *ngIf="filmes.length == 0">
+            <h5 class="text-center">Catalogo vazio</h5>
+
+        </div>
+    </div>
+
+
+</section>

@@ -1,0 +1,14 @@
+.actions {
+    width: 100%;
+    button {
+        background: none;
+        padding: 3px;
+        &:first-child {
+            margin-right: 15px;
+        }
+        i {
+            font-size: 1.5em;
+            margin-right: 2px;
+        }
+    }
+}

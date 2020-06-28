@@ -1,0 +1,101 @@
+// Colors
+$roxo: #9640FF;
+$azul: #3AA9E8;
+$verde: #4DFF76;
+$laranja: #DA7908;
+$amarelo: #FFFF00;
+$branco: #fff;
+$primaryTheme: #232A3A;
+$cinza: #aaa;
+$vermelho: #d11c1c;
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+main {
+    margin: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h5 {
+    font-size: 34px;
+}
+
+// ****************** Utilitarios *****************
+.flex {
+    display: flex;
+}
+
+// ****************** Colors *****************
+.txt-success {
+    color: rgb(49, 160, 54);
+}
+
+.txt-warning {
+    color: rgb(252, 255, 77);
+}
+
+.txt-danger {
+    color: $vermelho;
+}
+
+.txt-primary {
+    color: $azul;
+}
+
+// -***************** Button **************
+.btn {
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 2px;
+}
+
+// // ****** Inputs ******
+// input {
+//     border: 2px solid $cinza;
+//     border-radius: 4px;
+//     margin: 8px 0;
+//     outline: none;
+//     padding: 8px;
+//     box-sizing: border-box;
+//     transition: 0.3;
+//     &[type=text] {
+//         width: 100%;
+//     }
+//     &[type=number] {
+//         width: 30%;
+//     }
+//     &:focus {
+//         border-color: $azul;
+//         box-shadow: 0 0 4px $azul;
+//     }
+// }
+// select {
+//     border: 2px solid $cinza;
+//     border-radius: 4px;
+//     margin: 8px 0;
+//     outline: none;
+//     padding: 8px;
+//     box-sizing: border-box;
+//     transition: 0.3;
+//     &:focus {
+//         border-color: $azul;
+//         box-shadow: 0 0 4px $azul;
+//     }
+// }

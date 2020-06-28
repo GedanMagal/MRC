@@ -1,0 +1,27 @@
+<app-title-page title="Cadastro"></app-title-page>
+<main>
+
+    <form [formGroup]="formCad">
+        {{this.formCad.value | json}}
+        <div>
+            <div>
+                <input type="text" formControlName="titulo" name="cadastro" placeholder="titulo">
+                <input type="text" formControlName="sinopse" name="cadastro" placeholder="Sinopse">
+                <select formControlName="genero" aria-placeholder="Gênero">
+                    <option [value]="null">Gênero</option>
+                    <option *ngFor="let genre of generos | async" [value]="genre">{{genre}}</option>
+                </select>
+                <select formControlName="idioma" aria-placeholder="Idioma">
+                    <option [value]="null">Idioma</option>
+                    <option *ngFor="let idioma of idiomas | async" [value]="idioma">{{idioma}}</option>
+                </select>
+                <input type="text" formControlName="legendado" name="cadastro" placeholder="legendado">
+                <input type="number" max="5" min="1" formControlName="avaliacao" name="cadastro" placeholder="Avaliação">
+                <input type="text" formControlName="diretor" name="cadastro" placeholder="Diretor">
+                <input type="text" formControlName="imdbLink" name="cadastro" placeholder="Imdb link">
+                <input type="date" formControlName="dtLancamento" name="cadastro" placeholder="Data de lançamento">
+            </div>
+        </div>
+    </form>
+
+</main>
