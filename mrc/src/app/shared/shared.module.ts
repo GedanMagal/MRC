@@ -3,6 +3,7 @@ import { NavComponent } from './components/nav/nav.component';
 import { CommonModule } from '@angular/common';
 
 import { TitlePageComponent } from './components/title-page/title-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
     declarations: [
@@ -10,7 +11,8 @@ import { TitlePageComponent } from './components/title-page/title-page.component
         TitlePageComponent,
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        RouterModule
     ],
     exports: [
         NavComponent,

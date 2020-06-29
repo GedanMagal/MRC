@@ -55,47 +55,86 @@ h5 {
     color: $vermelho;
 }
 
+.txt-default {
+    color: $primaryTheme;
+}
+
 .txt-primary {
     color: $azul;
 }
 
-// -***************** Button **************
-.btn {
-    cursor: pointer;
-    margin: 0 10px;
-    padding: 2px;
+.bg-success {
+    color: rgb(49, 160, 54);
 }
 
-// // ****** Inputs ******
-// input {
-//     border: 2px solid $cinza;
-//     border-radius: 4px;
-//     margin: 8px 0;
-//     outline: none;
-//     padding: 8px;
-//     box-sizing: border-box;
-//     transition: 0.3;
-//     &[type=text] {
-//         width: 100%;
-//     }
-//     &[type=number] {
-//         width: 30%;
-//     }
-//     &:focus {
-//         border-color: $azul;
-//         box-shadow: 0 0 4px $azul;
-//     }
-// }
-// select {
-//     border: 2px solid $cinza;
-//     border-radius: 4px;
-//     margin: 8px 0;
-//     outline: none;
-//     padding: 8px;
-//     box-sizing: border-box;
-//     transition: 0.3;
-//     &:focus {
-//         border-color: $azul;
-//         box-shadow: 0 0 4px $azul;
-//     }
-// }
+.bg-warning {
+    color: rgb(252, 255, 77);
+    color: $branco !important;
+}
+
+.bg-danger {
+    color: $vermelho;
+    color: $branco !important;
+}
+
+.bg-primary {
+    color: $azul;
+    color: $branco !important;
+}
+
+// -***************** Button **************
+.btn {
+    cursor: pointer !important;
+    margin: 0 10px 10px 0 !important;
+    padding: 6px !important;
+    font-weight: bold !important;
+    font-size: 15px !important;
+}
+
+// ****** Inputs ******
+input {
+    border: 2px solid $cinza;
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3;
+    &[type=text] {
+        width: 100%;
+    }
+    &[type=number] {
+        width: 30%;
+    }
+    &:focus {
+        border-color: $azul;
+        box-shadow: 0 0 4px $azul;
+    }
+}
+
+select {
+    border: 2px solid $cinza;
+    border-radius: 4px;
+    // margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: 0.3;
+    width: 100%;
+    &:focus {
+        border-color: $azul;
+        box-shadow: 0 0 4px $azul;
+    }
+}
+
+@media (min-width: 720px) {
+    input {
+        margin: 0 10px 0 10px;
+        &[type=number] {
+            width: 60%;
+        }
+        &[type=text] {
+            width: 100%;
+        }
+    }
+}

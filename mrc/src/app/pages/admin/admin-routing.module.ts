@@ -15,7 +15,7 @@ const routes: Routes = [
             .then(m => m.HomeModule)
       },
       {
-        path: 'cadastro',
+        path: 'admin/cadastro',
         loadChildren: () =>
           import('./cad-filme/cad-filme.module')
             .then(m => m.CadFilmeModule)

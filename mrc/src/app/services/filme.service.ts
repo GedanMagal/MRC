@@ -8,27 +8,27 @@ import { environment } from 'src/environments/environment';
 })
 export class FilmeService {
 
-constructor(
-  private http : HttpClient
-) { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
 
-public createFilme(){
-  
-}
+  public createFilme(filme: FilmeModel) {
+    return this.http.post<FilmeModel>(environment.apiUrlFilmes, { filme })
+  }
 
-public getFilmes(){
-  return this.http.get<FilmeModel[]>(environment.apiUrlFilmes);
-}
+  public getFilmes() {
+    return this.http.get<FilmeModel[]>(environment.apiUrlFilmes);
+  }
 
-public updateFilme(){
+  public updateFilme() {
 
-}
+  }
 
-public deleteFilme(idFilme){
-  console.log(idFilme)
-  return this.http.delete(environment.apiUrlFilmes.concat('/'+idFilme));
-}
+  public deleteFilme(idFilme) {
+    console.log(idFilme)
+    return this.http.delete(environment.apiUrlFilmes.concat('/' + idFilme));
+  }
 
 
 
