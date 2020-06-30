@@ -1,9 +1,12 @@
-# Product Name
-> Projeto simples e que agrega bons conceitos de estrutura com o angular. Foram aplicados padrões no projeto como o lazy loading e estruturação de pastas que mantem uma boa organização, padronização e entendimento.
 
-# Product Name
+
+# Movie rental control - MRC
 
 > Controle de locadora com operações básicas como listagem,inclusão,delete e update de filmes
+
+# Padrões
+> Projeto simples e que agrega bons conceitos de estrutura com o angular. Foram aplicados padrões no projeto como o lazy loading e estruturação de pastas que mantem uma boa organização, padronização e entendimento.
+
 
 ## Installation
 
