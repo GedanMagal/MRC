@@ -35,7 +35,3 @@ após finalizar a instalação dos pacotes, poderá rodar o projeto com o comand
 ```sh
 ng s -o
 ```
-
-
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
