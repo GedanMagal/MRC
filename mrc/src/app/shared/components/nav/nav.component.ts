@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilterService } from 'src/app/services/filter.service';
 
 
 @Component({
@@ -8,10 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-
-  constructor() { }
+  filter: string;
+  constructor(
+    private filterService: FilterService
+  ) { }
 
   ngOnInit(): void {
   }
+
+  // changeFilter() {
+  //   this.filterService.updateValue(this.filter);
+  // }
+
 
 }
