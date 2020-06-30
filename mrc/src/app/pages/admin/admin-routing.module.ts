@@ -19,6 +19,12 @@ const routes: Routes = [
         loadChildren: () =>
           import('./cad-filme/cad-filme.module')
             .then(m => m.CadFilmeModule)
+      },
+      {
+        path: 'admin/cadastro/:filmeId',
+        loadChildren: () =>
+          import('./cad-filme/cad-filme.module')
+            .then(m => m.CadFilmeModule)
       }
     ]
   }]

@@ -1,70 +1,61 @@
 <main class="container-fluid">
     <app-title-page title="Cadastro"></app-title-page>
     <i class="fa fa-arrow-left txt-default mb-5" (click)="back()" aria-hidden="true"></i>
-
-
     <div class="row">
         <form class="col" [formGroup]="formCad">
-            <!-- {{this.formCad.value | json}} -->
             <div class="row">
                 <div class="col-12 col-md-3 box-input">
                     <input type="text" formControlName="titulo" name="cadastro" placeholder="titulo">
-                    <span class="txt-danger" *ngIf="formCad.get('titulo').pristine && formCad.get('titulo').touched">Titulo
+                    <span class="txt-danger" *ngIf="formCad.controls.titulo.errors?.required && formCad.controls.titulo.touched">Titulo
                         obrigatório</span>
                 </div>
                 <div class="col-12 col-md-3 box-input">
                     <input type="text" formControlName="sinopse" name="cadastro" placeholder="Sinopse">
-                    <span class="txt-danger" *ngIf="formCad.get('sinopse').pristine && formCad.get('sinopse').touched">Sinopse
+                    <span class="txt-danger" *ngIf="formCad.controls.sinopse.errors?.required && formCad.controls.sinopse.touched">Sinopse
                         obrigatório</span>
                 </div>
 
                 <div class="col-12 col-md-3 mb-2 box-input">
                     <select formControlName="genero" aria-placeholder="Gênero">
-                        <option [value]="null">Gênero</option>
+                        <option [value]="''">Gênero</option>
                         <option *ngFor="let genre of generos | async" [value]="genre">{{genre}}</option>
                     </select>
-                    <span class="txt-danger" *ngIf="formCad.get('genero').pristine && formCad.get('genero').touched">Gênero
+                    <span class="txt-danger" *ngIf="formCad.controls.genero.pristine && formCad.controls.genero.touched">Gênero
                         obrigatório</span>
                 </div>
                 <div class="col-12 col-md-3 mb-2 box-input">
                     <select formControlName="idioma" aria-placeholder="Idioma">
-                        <option [value]="null">Idioma</option>
+                        <option [value]="''">Idioma</option>
                         <option *ngFor="let idioma of idiomas | async" [value]="idioma">{{idioma}}</option>
                     </select>
-                    <span class="txt-danger" *ngIf="formCad.get('idioma').pristine && formCad.get('idioma').touched">Idioma
+                    <span class="txt-danger" *ngIf="formCad.controls.idioma.pristine && formCad.controls.idioma.touched">Idioma
                         obrigatório</span>
                 </div>
                 <div class="col-12 col-md-6 box-input">
                     <input type="text" formControlName="legendado" name="cadastro" placeholder="Legendado">
-                    <span class="txt-danger" *ngIf="formCad.get('legendado').pristine && formCad.get('legendado').touched">Legendado
+                    <span class="txt-danger" *ngIf="formCad.controls.legendado.pristine && formCad.controls.legendado.touched">Legendado
                         obrigatório</span>
                 </div>
                 <div class="col-12 col-md-3 box-input">
                     <input type="number" max="5" min="1" formControlName="avaliacao" name="cadastro" placeholder="Avaliação">
-                    <span class="txt-danger" *ngIf="formCad.get('avaliacao').pristine && formCad.get('avaliacao').touched">Titulo
+                    <span class="txt-danger" *ngIf="formCad.controls.avaliacao.pristine && formCad.controls.avaliacao.touched">Titulo
                         obrigatório</span>
                 </div>
 
                 <div class="col-12 col-md-3 box-input">
                     <input type="text" formControlName="diretor" name="cadastro" placeholder="Diretor">
-                    <span class="txt-danger" *ngIf="formCad.get('diretor').pristine && formCad.get('diretor').touched">Titulo
-                        obrigatório</span>
                 </div>
 
                 <div class="col-12 col-md-3 box-input">
                     <input type="text" formControlName="imdbLink" name="cadastro" placeholder="Imdb link">
-                    <span class="txt-danger" *ngIf="formCad.get('imdbLink').pristine && formCad.get('imdbLink').touched">Titulo
-                        obrigatório</span>
                 </div>
 
-                <div class="col-12 col-md-1 box-input" (change)="updateValue()">
-                    <input type="date" formControlName="dtLancamento" name="cadastro" placeholder="Data de lançamento">
-                    <span class="txt-danger" *ngIf="formCad.get('dtLancamento').pristine && formCad.get('dtLancamento').touched">Titulo
-                        obrigatório</span>
+                <div class="col-12 col-md-2 box-input">
+                    <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" formControlName="dtLancamento" name="cadastro" placeholder="Data de lançamento">
                 </div>
 
                 <div class="col col-12 ">
-                    <button class="btn bg-primary" [disabled]="formCad.invalid" (click)="addFilme()">Adicionar</button>
+                    <button class="btn bg-primary" [disabled]="formCad.invalid" (click)="addFilme()">{{filmeId != (null || undefined) ? 'Atualizar' : 'Cadastrar'}}</button>
                     <button class="btn bg-warning" (click)="resetForm()">Limpar</button>
                 </div>
             </div>

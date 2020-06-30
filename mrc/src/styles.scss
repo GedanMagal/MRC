@@ -44,15 +44,19 @@ h5 {
 
 // ****************** Colors *****************
 .txt-success {
-    color: rgb(49, 160, 54);
+    color: $verde;
 }
 
 .txt-warning {
-    color: rgb(252, 255, 77);
+    color: $amarelo;
 }
 
 .txt-danger {
     color: $vermelho;
+}
+
+.txt-orange {
+    color: $laranja;
 }
 
 .txt-default {
@@ -64,11 +68,16 @@ h5 {
 }
 
 .bg-success {
-    color: rgb(49, 160, 54);
+    color: $verde;
+}
+
+.bg-default {
+    background: $primaryTheme !important;
+    color: $branco !important;
 }
 
 .bg-warning {
-    color: rgb(252, 255, 77);
+    color: $amarelo;
     color: $branco !important;
 }
 
@@ -78,7 +87,7 @@ h5 {
 }
 
 .bg-primary {
-    color: $azul;
+    color: $azul !important;
     color: $branco !important;
 }
 
@@ -137,4 +146,8 @@ select {
             width: 100%;
         }
     }
+}
+
+.card-header {
+    border-radius: 10px !important;
 }

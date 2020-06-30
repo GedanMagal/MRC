@@ -14,23 +14,23 @@ export class FilmeService {
 
 
   public createFilme(filme: FilmeModel) {
-    return this.http.post<FilmeModel>(environment.apiUrlFilmes, { filme })
+    return this.http.post<FilmeModel>(environment.apiUrlFilmes,  filme)
   }
 
   public getFilmes() {
     return this.http.get<FilmeModel[]>(environment.apiUrlFilmes);
   }
 
-  public updateFilme() {
-
+  public getFilmeById(filmeId) {
+    return this.http.get<FilmeModel>(environment.apiUrlFilmes.concat('/'+ filmeId));
   }
 
-  public deleteFilme(idFilme) {
-    console.log(idFilme)
-    return this.http.delete(environment.apiUrlFilmes.concat('/' + idFilme));
+  public updateFilme(filme: FilmeModel) {
+    return this.http.put(environment.apiUrlFilmes.concat('/'+ Number(filme.id)), filme);
   }
 
-
-
+  public deleteFilme(filmeId) {
+    return this.http.delete(environment.apiUrlFilmes.concat('/' + filmeId));
+  }
 
 }

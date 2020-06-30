@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { FilmeService } from 'src/app/services/filme.service';
 import { FilmeModel } from 'src/app/models/filme';
 import { ToastrService } from 'ngx-toastr';
@@ -12,7 +12,8 @@ import { ToastrService } from 'ngx-toastr';
 export class HomeComponent implements OnInit {
 
 
-  filmes: Array<FilmeModel> = []
+  filmes: Array<FilmeModel> = [];
+  filter: string;
 
 
   constructor(
@@ -27,7 +28,7 @@ export class HomeComponent implements OnInit {
 
   removeFilme(filme: FilmeModel) {
     this.filmeService.deleteFilme(filme.id).subscribe(data => {
-      this.toastr.success(filme.titulo +" Excluido com sucesso!");
+      this.toastr.success(filme.titulo + " Excluido com sucesso!");
       this.getFilmes();
 
     }, (err) => {
@@ -53,5 +54,14 @@ export class HomeComponent implements OnInit {
 
     }
   }
+
+  filterList() {
+    let newArray = this.filmes.filter(el => {
+      el.titulo === this.filter;
+    });
+    console.log(newArray);
+  }
+
+
 
 }

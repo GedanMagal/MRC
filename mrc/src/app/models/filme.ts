@@ -3,11 +3,11 @@ export class FilmeModel {
         titulo: string;
         sinopse: string ;
         genero: string;
-        dtLancamento?: Date ;
         idioma: string;
         legendado: boolean;
+        avaliacao: number;
+        dtLancamento?: Date ;
         diretor?: string;
         imdbLink?: string;
-        avaliacao: number;
 
 }

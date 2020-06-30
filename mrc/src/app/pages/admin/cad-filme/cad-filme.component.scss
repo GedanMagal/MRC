@@ -6,3 +6,9 @@ span {
 .box-input {
     margin-bottom: 10px;
 }
+
+.input-danger {
+    border-color: red;
+    box-shadow: 0 0 3px red;
+    transition: 0.3;
+}
