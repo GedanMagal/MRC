@@ -1,9 +1,6 @@
 # Product Name
 
-> Listagem de filmes
-> Inclusão de filmes
-> Update de filmes
-> Delete de filmes
+> Listagem,Inclusão,Delete e update de filmes
 
 ## Installation
 
