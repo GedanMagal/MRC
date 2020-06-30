@@ -1,5 +1,4 @@
 # Product Name
-> Short blurb about what your product does.
 
 > Listagem de filmes
 > Inclusão de filmes
