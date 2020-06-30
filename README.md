@@ -1,5 +1,5 @@
 # Product Name
-> Projeto simples e que agrega bons conceitos de estrutura com o angular. Foram aplicados padrões no projeto como o lazy loading e apliquei uma estrutura de pastas que mantem a estrutura de facil entendimento e padronização.
+> Projeto simples e que agrega bons conceitos de estrutura com o angular. Foram aplicados padrões no projeto como o lazy loading e estruturação de pastas que mantem uma boa organização, padronização e entendimento.
 
 # Product Name
 
