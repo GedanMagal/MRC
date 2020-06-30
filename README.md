@@ -1,4 +1,7 @@
 # Product Name
+> Projeto simples e que agrega bons conceitos de estrutura com o angular. Foram aplicados padrões no projeto como o lazy loading e apliquei uma estrutura de pastas que mantem a estrutura de facil entendimento e padronização.
+
+# Product Name
 
 > Controle de locadora com operações básicas como listagem,inclusão,delete e update de filmes
 
