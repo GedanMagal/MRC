@@ -1,6 +1,6 @@
 # Product Name
 
-> Listagem,Inclusão,Delete e update de filmes
+> Controle de locadora com operações básicas como listagem,inclusão,delete e update de filmes
 
 ## Installation
 
